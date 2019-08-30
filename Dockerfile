@@ -17,4 +17,4 @@ RUN apk --no-cache add curl && \
     rm /tmp/packer.zip && \
     chmod +x /usr/bin/packer
 
-ENTRYPOINT ["/bin/packer"]
+ENTRYPOINT ["/usr/bin/packer"]
