@@ -1,4 +1,4 @@
-FROM hashicorp/docker:19.03
+FROM docker:19.03
 
 LABEL "com.github.actions.name"="packer action"
 LABEL "com.github.actions.description"="packer"
