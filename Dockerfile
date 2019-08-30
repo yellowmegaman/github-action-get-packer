@@ -1,4 +1,13 @@
-FROM alpine:3.10
-RUN  wget -q https://releases.hashicorp.com/packer/1.4.3/packer_1.4.3_linux_amd64.zip && \
-     unzip -q packer_1.4.3_linux_amd64.zip && \
-     rm packer_1.4.3_linux_amd64.zip
+FROM hashicorp/packer:1.4.3
+
+LABEL "com.github.actions.name"="packer action"
+LABEL "com.github.actions.description"="packer"
+LABEL "com.github.actions.icon"="hash"
+LABEL "com.github.actions.color"="green"
+
+LABEL "repository"="https://github.com/yellowmegaman/github-action-get-packer"
+LABEL "homepage"="https://github.com/yellowmegaman/github-action-get-packer"
+LABEL "maintainer"="yellowmegaman <yellowmegaman@gmail.com>"
+LABEL "version"="0.0.1"
+
+ENTRYPOINT ["/bin/packer"]
